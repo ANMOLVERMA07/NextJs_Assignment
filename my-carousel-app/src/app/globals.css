@@ -16,10 +16,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #3f3939;
+    --background: #292A2F;
     --foreground: #ededed;
   }
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 
 body {
   background: var(--background);
@@ -28,9 +33,9 @@ body {
 }
 
 .card {
-  background: #111; /* dark background */
+  background: #35353d; /* dark background */
   height: 20rem;
-  border-radius: 10px;
+  border-radius: 24px;
   padding: 2.4rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -42,15 +47,15 @@ body {
 }
 
 .icon-wrapper {
-  background-color: #4CAF50; /* vibrant green */
-  width: 3rem;
-  height: 3rem;
+  background-color: #292A2F; /* vibrant green */
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+  box-shadow: 0 0 10px #292A2F;
 }
 
 .card-title {
@@ -61,6 +66,7 @@ body {
 
 .card-text {
   font-size: 0.95rem;
+  color: #939090;
   line-height: 1.5;
   opacity: 0.85;
   max-width: 16rem;

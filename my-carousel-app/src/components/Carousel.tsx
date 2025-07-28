@@ -5,6 +5,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { motion } from 'framer-motion';
 
 interface Card {
   title: string;
@@ -15,23 +16,33 @@ interface Card {
 const cards: Card[] = [
   {
     title: 'Efficiency',
-    description: 'Streamline your workflow with best practices.',
-    icon: <img src="/icons/efficiency.svg" alt="Efficiency" />
+    description: 'Lorem ipsum dolor sit amet elit. Adipisci assumenda quasi explicabo quas laborum ratione incidunt dolorem aut!',
+    icon: <img className='scale-80' src="https://img.icons8.com/?size=100&id=IOqNKauMiZ6W&format=png&color=000000" alt="Commitment" />
   },
   {
     title: 'Accountability',
-    description: 'We own our outcomes and learn from them.',
-    icon: <img src="/icons/accountability.svg" alt="Accountability" />
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque optio, dolores numquam sit laboriosam ipsam',
+    icon: <img className='scale-80' src="https://img.icons8.com/?size=100&id=1u7j3FdzY1su&format=png&color=000000" alt="Accountability" />
   },
   {
     title: 'Commitment',
-    description: 'Dedicated to delivering excellence.',
-    icon: <img src="/icons/commitment.svg" alt="Commitment" />
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque optio, dolores numquam sit laboriosam ipsam',
+    icon: <img className='scale-80' src="https://img.icons8.com/?size=100&id=p08Z6JR6xt6X&format=png&color=000000" alt="Commitment" />
   },
   {
     title: 'Team Work',
-    description: 'Collaboration fuels our success.',
-    icon: <img src="/icons/teamwork.svg" alt="Team Work" />
+    description: 'Lorem ipsum dolor sit amet elit. Adipisci assumenda quasi explicabo quas laborum ratione incidunt dolorem aut!',
+    icon: <img className='scale-80' src="https://img.icons8.com/?size=100&id=GNjpmJOfO8fT&format=png&color=000000" alt="Team Work" />
+  },
+  {
+    title: 'Commitment',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque optio, dolores numquam sit laboriosam ipsam',
+    icon: <img className='scale-80' src="https://img.icons8.com/?size=100&id=p08Z6JR6xt6X&format=png&color=000000" alt="Commitment" />
+  },
+  {
+    title: 'Accountability',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque optio, dolores numquam sit laboriosam ipsam',
+    icon: <img className='scale-80' src="https://img.icons8.com/?size=100&id=1u7j3FdzY1su&format=png&color=000000" alt="Accountability" />
   }
 ];
 
@@ -51,13 +62,19 @@ const Carousel: React.FC = () => {
     >
       {cards.map((card, idx) => (
         <SwiperSlide key={idx}>
-          <div className="card">
+          <motion.div
+          whileHover={{ scale: 1.05 }}
+  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+
+ className="card cursor-pointer">
   <div className="icon-wrapper">
     {card.icon}
   </div>
   <h3 className="card-title">{card.title}</h3>
   <p className="card-text">{card.description}</p>
-</div>
+  <div className="mt-4 w-16 h-0.5 bg-white" />
+
+</motion.div>
 
         </SwiperSlide>
       ))}

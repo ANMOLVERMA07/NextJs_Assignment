@@ -33,7 +33,7 @@ body {
 }
 
 .card {
-  background: #35353d; /* dark background */
+  background: #35353d;
   height: 20rem;
   border-radius: 24px;
   padding: 2.4rem;
@@ -43,11 +43,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff; /* white text */
+  color: #fff;
 }
 
 .icon-wrapper {
-  background-color: #292A2F; /* vibrant green */
+  background-color: #292A2F;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;

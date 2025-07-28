@@ -1,5 +1,3 @@
-// components/Carousel.tsx
-
 'use client';
 
 import React from 'react';
@@ -53,9 +51,7 @@ const Carousel: React.FC = () => {
       spaceBetween={20}
       navigation
       breakpoints={{
-        // when viewport ≥ 0px
         0: { slidesPerView: 1 },
-        // when viewport ≥ 768px
         768: { slidesPerView: 3 }
       }}
       style={{ padding: '2rem 1rem' }}

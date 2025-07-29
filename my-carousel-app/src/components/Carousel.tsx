@@ -131,7 +131,7 @@ const Carousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative px-6 p-2">
+    <div className="relative px-1 p-2">
 
       <div className="absolute top-1/2 -translate-y-1/2 left-[-2rem] z-10">
         <div ref={prevRef} className="swiper-button-prev cursor-pointer p-2 bg-white text-black rounded-full shadow-lg hover:bg-orange-300 transition" />
@@ -163,20 +163,20 @@ const Carousel: React.FC = () => {
       >
         {cards.map((card, idx) => (
           <SwiperSlide key={idx}>
-            <div className="w-[90%] max-w-[24rem] mx-auto sm:w-full ">
-              <motion.div
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.1, ease: "easeInOut" }}
-                className="card cursor-pointer px-5 py-6 sm:p-6 rounded-xl bg-gradient-to-r from-gray-900 to-black text-white shadow-md hover:shadow-lg transition mt-2 mb-2"
-              >
-                <div className="icon-wrapper mb-6 mt-2 flex justify-center items-center h-[80px]">
-                  <div className="w-[64px] h-[64px]">{card.icon}</div>
-                </div>
-                <h3 className="card-title text-lg font-bold mb-2 text-center">{card.title}</h3>
-                <p className="card-text text-sm text-gray-300 text-center">{card.description}</p>
-                <div className="mt-4 w-14 h-0.5 bg-white mx-auto border" />
-              </motion.div>
-            </div>
+            <div className="w-[98%] sm:w-full max-w-[24rem] mx-auto">
+  <motion.div
+    whileHover={{ scale: 1.04 }}
+    transition={{ duration: 0.1, ease: "easeInOut" }}
+    className="card cursor-pointer px-4 py-6 sm:px-5 sm:py-6 rounded-xl bg-gradient-to-r from-gray-900 to-black text-white shadow-md hover:shadow-lg transition mt-2 mb-2"
+  >
+    <div className="icon-wrapper mb-6 mt-2 flex justify-center items-center h-[80px] sm:h-[64px] mx-auto">
+      <div className="w-[64px] h-[64px]">{card.icon}</div>
+    </div>
+    <h3 className="card-title text-base sm:text-lg font-bold mb-2 text-center">{card.title}</h3>
+    <p className="card-text text-sm sm:text-sm text-gray-300 text-center">{card.description}</p>
+    <div className="mt-4 w-14 h-0.5 bg-white mx-auto border" />
+  </motion.div>
+</div>
           </SwiperSlide>
         ))}
       </Swiper>

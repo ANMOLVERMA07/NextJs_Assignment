@@ -50,6 +50,7 @@ body {
   will-change: transform;
 }
 
+
 .icon-wrapper {
   background-color: #292A2F;
   width: 4rem;
@@ -111,3 +112,22 @@ body {
   left: -40px;
 }
 
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    /* max-height: max-content; */
+    padding: 1.2rem;
+  }
+
+  .icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+}

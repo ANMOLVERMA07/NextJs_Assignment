@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #292A2F;
+    --background: #161619;
     --foreground: #ededed;
   }
 }
@@ -34,6 +34,9 @@ body {
 
 .card {
   background: #35353d;
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  background-image: linear-gradient(1deg, rgb(19, 19, 24) -3%, #35353d 97%);
   height: 20rem;
   border-radius: 24px;
   padding: 2.4rem;
@@ -44,12 +47,13 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  will-change: transform;
 }
 
 .icon-wrapper {
   background-color: #292A2F;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -71,3 +75,39 @@ body {
   opacity: 0.85;
   max-width: 16rem;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  scale: 80%;
+
+  background: gray;
+  color: white;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid black;
+
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: translateY(-50%) scale(1.15);
+  background: black;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.swiper-button-next {
+  right: -40px;
+}
+
+
+.swiper-button-prev {
+  left: -40px;
+}
+
